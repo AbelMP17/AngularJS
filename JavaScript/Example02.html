@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Refer using the name tag</title>
+    <script>
+        function bodyload(){
+            pic.src="../img/google.jpeg"
+            home.btnRegister.value="Register"
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img name="pic" width="300" height="300" border="1">
+    </div>
+    <div>
+        <form name="home">
+            name:   <input type="text">
+                    <input type="button" name="btnRegister">
+        </form>
+    </div>
+</body>
+</html>

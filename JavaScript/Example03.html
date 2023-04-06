@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Refer with id</title>
+    <script>
+        function bodyload(){
+            document.getElementById("pic").src="../img/google.jpeg"
+            document.getElementById("txtRegister").value="Register"
+        }
+    </script>
+</head>
+<body onload="bodyload()">
+    <div>
+        <img id="pic" width="300" height="300" border="1">
+    </div>
+    <div>
+        <form>
+            name:   <input type="text">
+                    <input type="button" id="txtRegister">
+        </form>
+    </div>
+</body>
+</html>
