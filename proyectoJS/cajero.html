@@ -7,11 +7,14 @@
     <title>Cajero</title>
 </head>
 <body>
-    Nombre: <br>
-    <input type="text" placeholder="Nombre Producto" ng-model="lista.nombre"> <br><br>
-    Precio: <br>
-    <input type="text" placeholder="Precio Producto" ng-model="lista.precio"><br><br>
-
-    <input type="button" value="Añadir producto" ng-click="lista.addProducto()">
+    <div class="cajero">
+        <p>Nombre:</p> 
+        <input type="text" placeholder="Nombre Producto" ng-model="lista.nombre"> <br><br>
+    
+        <p>Precio:</p> 
+        <input type="text" placeholder="Precio Producto" ng-model="lista.precio"><br><br>
+       
+        <input type="button" id="AP" value="Añadir producto" ng-click="lista.addProducto()">
+    </div> 
 </body>
 </html>

@@ -7,32 +7,35 @@
     <title>Productos</title>
 </head>
 <body>
-    <select name="" id="" ng-model="lista.productoSeleccionado">
-        <option ng-repeat="producto in lista.productos" value="{{producto.id}}">{{producto.nombre}}</option>
-    </select>
+    <div class="contenedor">
+        <div class="select">
+            <select name="" id="" ng-model="lista.productoSeleccionado">
+                <option ng-repeat="producto in lista.productos" value="{{producto.id}}">{{producto.nombre}}</option>
+            </select>
 
-    <input type="text" ng-model="lista.cantidad">
+            <input type="text" ng-model="lista.cantidad">
 
-    <input type="button" value="Añadir" ng-click="lista.addAlCarrito()">
-
-    <table cellspacing="0">
-        <thead>
-            <tr>
-                <td>Producto</td>
-                <td>Precio</td>
-                <td>Cantidad</td>
-                <td>Total</td>
+            <input type="button" value="Añadir" ng-click="lista.addAlCarrito()">
+        </div>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <td>Producto</td>
+                    <td>Precio</td>
+                    <td>Cantidad</td>
+                    <td>Total</td>
+                </tr>
+            </thead>
+            <tr ng-repeat="producto in lista.carrito">
+                <td>{{producto.nombre}}</td>
+                <td>{{producto.precio}}€</td>
+                <td>{{producto.cantidad}}</td>
+                <td>{{producto.total}}€</td>
             </tr>
-        </thead>
-        <tr ng-repeat="producto in lista.carrito">
-            <td>{{producto.nombre}}</td>
-            <td>{{producto.precio}}€</td>
-            <td>{{producto.cantidad}}</td>
-            <td>{{producto.total}}€</td>
-        </tr>
-        <tr class="total">
-            <td colspan="4">{{lista.getTotalCarrito()}}€</td>
-        </tr>
-    </table>
+            <tr class="total">
+                <td colspan="4">{{lista.getTotalCarrito()}}€</td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
