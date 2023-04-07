@@ -1,0 +1,33 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#menu{
+    background-color: #eee;
+    padding: 20px 10px;
+}
+#menu ul{
+    margin: 0;
+    padding: 0;
+}
+#menu ul li{
+    display: inline-block;
+}
+#menu ul li a{
+    color: #176b92;
+    padding: 10px;
+    text-decoration: none;
+}
+
+table thead td{
+    background:black;
+    color: white;
+}
+td{
+    padding: 10;
+}
+.total{
+    background: grey;
+    color: white;
+    text-align: right;
+}

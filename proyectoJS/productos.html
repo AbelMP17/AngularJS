@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+</head>
+<body>
+    <select name="" id="" ng-model="lista.productoSeleccionado">
+        <option ng-repeat="producto in lista.productos" value="{{producto.id}}">{{producto.nombre}}</option>
+    </select>
+
+    <input type="text" ng-model="lista.cantidad">
+
+    <input type="button" value="Añadir" ng-click="lista.addAlCarrito()">
+
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <td>Producto</td>
+                <td>Precio</td>
+                <td>Cantidad</td>
+                <td>Total</td>
+            </tr>
+        </thead>
+        <tr ng-repeat="producto in lista.carrito">
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.precio}}€</td>
+            <td>{{producto.cantidad}}</td>
+            <td>{{producto.total}}€</td>
+        </tr>
+        <tr class="total">
+            <td colspan="4">{{lista.getTotalCarrito()}}€</td>
+        </tr>
+    </table>
+</body>
+</html>
